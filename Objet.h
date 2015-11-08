@@ -10,7 +10,8 @@ private:
 
 public:
 
-	Objet(int p):poids(p){}
+	Objet(int p = 0):poids(p){}
+
 	int getPoids();
 
 

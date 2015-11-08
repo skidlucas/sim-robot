@@ -10,7 +10,7 @@ private:
 
 public:
 
-	Plot(int h):hauteur(h){}
+	Plot(int h = 0):hauteur(h){}
 	int getHauteur();
 
 

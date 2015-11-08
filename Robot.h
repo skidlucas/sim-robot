@@ -14,20 +14,24 @@ class Robot {
 private:
 	string direction;
 	EtatRobot etat;
+	Position position;
+	Plot plot;
+	Objet objet;
 
 public:
 
+	Robot(string dir = "N"):direction(dir){}
 
-	// EtatRobot avancer(int x, int y);
-	// EtatRobot tourner(String direction);
-	// EtatRobot saisir(String direction);
-	// EtatRobot poser();
+	// void avancer(int x, int y);
+	// void tourner(String direction);
+	void saisir(Objet obj);
+	// void poser();
 	// int peser();
-	// EtatRobot rencontrerPlot(Plot p);
+	// void rencontrerPlot(Plot p);
 	// int evaluerPlot();
-	// EtatRobot figer();
-	// EtatRobot repartir();
-	// void afficher();
+	// void figer();
+	// void repartir();
+	void afficher();
 
 
 };
