@@ -1,3 +1,6 @@
+#ifndef _ETAT_ROBOT_
+#define _ETAT_ROBOT_
+
 #include <stdio.h>
 #include <string.h>
 
@@ -20,3 +23,6 @@ EtatRobot saisir();
 // EtatRobot repartir();
 
 };
+
+
+#endif

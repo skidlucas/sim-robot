@@ -1,6 +1,7 @@
+#ifndef _ROBOT_
+#define _ROBOT_
+
 #include <string>
-
-
 #include "EtatRobot.h"
 #include "Position.h"
 #include "Plot.h"
@@ -35,3 +36,5 @@ public:
 
 
 };
+
+#endif
