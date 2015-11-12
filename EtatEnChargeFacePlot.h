@@ -15,12 +15,14 @@ private:
 	static EtatEnChargeFacePlot *instance;
 
 public:
-	// EtatRobot poser();
-	// EtatRobot tourner();
-	// int peser();
-	// int evaluerPlot();
+	EtatRobot *poser();
+	EtatRobot *tourner();
+	void peser();
+	void evaluerPlot();
 
-	// EtatEnChargeFacePlot getInstance();
+	static EtatEnChargeFacePlot *getInstance(){
+		return instance;
+	}
 
 };
 

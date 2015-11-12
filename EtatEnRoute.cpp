@@ -1,6 +1,10 @@
 #include "EtatEnRoute.h"
+#include "EtatFige.h"
 
-// EtatRobot EtatEnRoute::figer(){
-// 	//return EtatFigé.getInstance().setEtatPrecedent(this);
-// 	return *this;
-// }
+
+EtatRobot * EtatEnRoute::figer(){
+	EtatFige::getInstance()->setEtatPrecedent(this);
+
+	return EtatFige::getInstance();
+
+}

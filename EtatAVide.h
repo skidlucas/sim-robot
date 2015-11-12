@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <iostream>
 
 #include "EtatEnRoute.h"
 
@@ -15,11 +16,14 @@ private:
 	static EtatAVide *instance;
 
 public:
-	// EtatRobot rencontrerPlot();
-	// EtatRobot avancer();
-	// EtatRobot tourner();
+	EtatRobot *rencontrerPlot();
+	EtatRobot *avancer();
+	EtatRobot *tourner();
 
-	// EtatAVide getInstance();
+	static EtatAVide *getInstance(){
+		cout << "ssdrr" << endl;
+		return instance;
+	}
 
 };
 

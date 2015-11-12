@@ -8,13 +8,12 @@
 
 
 class EtatEnRoute : public EtatRobot {
-//class EtatEnRoute{
 
 private:
 
 public:
 
-EtatRobot figer();
+EtatRobot *figer();
 
 };
 

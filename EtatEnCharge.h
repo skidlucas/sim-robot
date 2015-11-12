@@ -15,13 +15,14 @@ private:
 	static EtatEnCharge *instance;
 
 public:
-	// EtatRobot avancer();
-	// int peser();
-	// EtatRobot rencontrerPlot();
-	// EtatRobot tourner();
+	EtatRobot *avancer();
+	void peser();
+	EtatRobot *rencontrerPlot();
+	EtatRobot *tourner();
 
-	// EtatEnCharge getInstance();
-
+	static EtatEnCharge *getInstance(){
+		return instance;
+	}
 };
 
 

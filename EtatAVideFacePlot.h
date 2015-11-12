@@ -5,6 +5,7 @@
 #include <string.h>
 
 #include "EtatEnRoute.h"
+#include "EtatEnChargeFacePlot.h"
 
 using namespace std;
 
@@ -15,11 +16,14 @@ private:
 	static EtatAVideFacePlot *instance;
 
 public:
-	// EtatRobot evaluerPlot();
-	// EtatRobot saisir();
-	// EtatRobot tourner();
+	void evaluerPlot();
+	EtatRobot *saisir();
+	EtatRobot *tourner();
 
-	// EtatAVideFacePlot getInstance();
+	static EtatAVideFacePlot *getInstance(){
+		return instance;
+	}
+
 
 };
 

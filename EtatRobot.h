@@ -10,17 +10,17 @@ private:
 
 public:
 
-class Exception{};
+class Bad_State{};
 
-// EtatRobot avancer();
-// EtatRobot tourner();
-EtatRobot saisir();
-// EtatRobot poser();
-// int peser();
-// EtatRobot rencontrerPlot();
-// int evaluerPlot();
-// EtatRobot figer();
-// EtatRobot repartir();
+EtatRobot *avancer();
+EtatRobot *tourner();
+EtatRobot *saisir();
+EtatRobot *poser();
+void peser();
+EtatRobot *rencontrerPlot();
+void evaluerPlot();
+EtatRobot *figer();
+EtatRobot *repartir();
 
 };
 

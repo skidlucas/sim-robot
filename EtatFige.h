@@ -13,13 +13,16 @@ using namespace std;
 class EtatFige : public EtatRobot {
 
 private:
-	EtatEnRoute *etatPrecedent = nullptr;
+	EtatRobot *etatPrecedent = nullptr;
 	static EtatFige *instance;
 
 public:
-	// EtatRobot repartir();
-	// setEtatPrecedent(EtatEnRoute etat);
-	// EtatFige getInstance();
+	EtatRobot *repartir();
+	void setEtatPrecedent(EtatRobot *etat);
+
+	static EtatFige *getInstance(){
+		return instance;
+	}
 
 };
 
