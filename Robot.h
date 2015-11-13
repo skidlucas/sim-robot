@@ -2,6 +2,8 @@
 #define _ROBOT_
 
 #include <string>
+
+
 #include "EtatRobot.h"
 #include "Position.h"
 #include "Plot.h"

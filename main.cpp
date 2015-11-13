@@ -9,8 +9,8 @@ int main(int argc, char const *argv[])
 	Robot r;
 	//Objet obj;
 	r.avancer(1,1);
+	cout << r.getPosition().getx() << endl; //Ca marche
 	//r.saisir(obj);
-	//cout << r.getEtat() << endl ;
 	//r.afficher();
 
 	return 0;

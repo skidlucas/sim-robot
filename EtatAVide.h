@@ -5,6 +5,8 @@
 #include <string.h>
 #include <iostream>
 
+#include <typeinfo>
+
 #include "EtatEnRoute.h"
 
 using namespace std;
@@ -13,7 +15,7 @@ using namespace std;
 class EtatAVide : public EtatEnRoute {
 
 private:
-	static EtatAVide *instance;
+	static EtatAVide * instance;
 
 public:
 	EtatRobot *rencontrerPlot();
@@ -21,7 +23,6 @@ public:
 	EtatRobot *tourner();
 
 	static EtatAVide *getInstance(){
-		cout << "ssdrr" << endl;
 		return instance;
 	}
 

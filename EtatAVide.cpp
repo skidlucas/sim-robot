@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <iostream>
 
-EtatAVide* EtatAVide::instance = new EtatAVide;
+EtatAVide * EtatAVide::instance = new EtatAVide;
 
 
 EtatRobot *  EtatAVide::avancer(){

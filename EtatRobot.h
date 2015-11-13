@@ -12,15 +12,15 @@ public:
 
 class Bad_State{};
 
-EtatRobot *avancer();
-EtatRobot *tourner();
-EtatRobot *saisir();
-EtatRobot *poser();
-void peser();
-EtatRobot *rencontrerPlot();
-void evaluerPlot();
-EtatRobot *figer();
-EtatRobot *repartir();
+virtual EtatRobot *avancer();
+virtual EtatRobot *tourner();
+virtual EtatRobot *saisir();
+virtual EtatRobot *poser();
+virtual void peser();
+virtual EtatRobot *rencontrerPlot();
+virtual void evaluerPlot();
+virtual EtatRobot *figer();
+virtual EtatRobot *repartir();
 
 };
 
