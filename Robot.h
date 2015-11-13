@@ -3,6 +3,7 @@
 
 #include <string>
 
+#include "RobotARepresenter.h"
 
 #include "EtatRobot.h"
 #include "Position.h"
@@ -18,7 +19,7 @@
 
 using namespace std;
 
-class Robot {
+class Robot : public RobotARepresenter{
 
 private:
 	string direction;
