@@ -10,12 +10,8 @@ class AfficheurRobotConsole : public Afficheur{
 
 private:
 
-
 public:
-
-	AfficheurRobotConsole(){}
-
-	void afficher();
+	virtual void afficher(string message);
 
 
 };

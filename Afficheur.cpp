@@ -1,9 +1,6 @@
 #include "Afficheur.h"
 
-void Afficheur::afficher(){
-	printf("afficheur principale\n");
+void Afficheur::afficher(string message){
+	cout << message << endl;
 }
 
-// void Afficheur::setRobot(Robot r){
-// 	robot = r;
-// }

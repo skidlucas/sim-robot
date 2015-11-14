@@ -2,8 +2,10 @@
 #define _ROBOT_
 
 #include <string>
+#include <typeinfo>
+#include <vector>
 
-#include "RobotARepresenter.h"
+#include "Afficheur.h"
 
 #include "EtatRobot.h"
 #include "Position.h"
@@ -19,7 +21,7 @@
 
 using namespace std;
 
-class Robot : public RobotARepresenter{
+class Robot{
 
 private:
 	string direction;
@@ -28,13 +30,16 @@ private:
 	Plot plot;
 	Objet objet;
 
+	vector<Afficheur> afficheurs;  //Probleme de conversion Afficher et 
+
+
+
 public:
 
 	Robot(string dir = "N"):direction(dir){
 		etat = EtatAVide::getInstance();
 		Position position(0,0);
-		plot = NULL;
-		objet = NULL;
+
 	}
 
 	void avancer(int x, int y);
@@ -53,7 +58,12 @@ public:
 	string getDirection();
 	Objet getObjet();
 
-	//void afficher();
+	
+	//Observer schema
+	void attacherAfficheur(Afficheur a);
+	void detacherAfficheur(Afficheur a);
+	void notifier(string message);
+
 
 
 };
