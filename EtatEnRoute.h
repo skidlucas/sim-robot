@@ -13,7 +13,7 @@ private:
 
 public:
 
-EtatRobot *figer();
+	EtatRobot *figer();
 
 };
 

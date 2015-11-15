@@ -99,10 +99,10 @@ void Robot::rencontrerPlot(Plot p){
 }
 
 int Robot::evaluerPlot(){
-		try{
+	try{
 		etat->evaluerPlot();
 		int h = plot.getHauteur();
-		notifier("Le robot a évalué un plot de taille :" + to_string(h));
+		notifier("Le robot a évalué un plot de taille : " + to_string(h));
 		return h;
 	}
 	

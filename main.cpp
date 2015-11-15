@@ -11,28 +11,96 @@ int main(int argc, char const *argv[])
 	Robot r;
 	Afficheur aff;
 	r.attacherAfficheur(aff);
-	r.avancer(1,1);
 	Plot plot(5);
-	r.rencontrerPlot(plot);
-	Objet obj;
-	r.saisir(obj);
-	r.peser();
+	Objet obj(10);
 
-	r.poser();
-	//r.peser(); //Bad_State
 
-	r.figer();
-	//r.avancer(3,3); //Bad_State
+    cout << endl << " ----- TEST ROBOT -----" << endl << endl << "**** EtatAVide ****" << endl;
+    r.avancer(5,2);
+    r.tourner("S");
+    
+    // ---- actions impossibles, renvoient une exception ----
 
-	r.repartir();
+    // r.evaluerPlot();
+    // r.saisir(obj);
+    // r.poser();
+    // r.peser();
+    // r.repartir();
 
-	//r.avancer(3,3); //Bad_State
+    //On change d'état avec cette action
+    r.rencontrerPlot(plot);
 
-	//r.tourner("N"); // meme direction donc mouvement null
-	//r.avancer(3,3); // Bad_State
+    cout << "**** EtatAVideFacePlot ****" << endl;
+    r.evaluerPlot();
 
-	r.tourner("S");
-	r.avancer(2,2);
+    // ---- actions impossibles, renvoient une exception ----
+
+    // r.avancer(0,9);
+    // r.peser();
+    // r.poser();
+    // r.repartir();
+    // r.tourner("O");
+    // r.rencontrerPlot(plot);
+
+    //On change d'état avec cette action
+    r.saisir(obj);
+
+
+    cout << "**** EtatEnChargeFacePlot ****" << endl;
+    r.peser();
+
+    // ---- actions impossibles, renvoient une exception ----
+
+    // r.repartir();
+    // r.avancer(1,2);
+    // r.evaluerPlot();
+    // r.saisir(obj);
+    // r.rencontrerPlot(plot);
+
+    //On change d'état avec cette action
+    r.tourner("E");
+
+    cout << "**** EtatEnCharge ****" << endl;
+
+    r.peser();
+    r.avancer(7,9);
+    r.tourner("O");
+
+    // ---- actions impossibles, renvoient une exception ----
+
+    // r.repartir();
+    // r.evaluerPlot();
+    // r.saisir(obj);
+    // r.rencontrerPlot(plot);
+
+    //On change d'état avec cette action
+    r.figer();
+
+    cout << "**** EtatFigé ****" << endl;
+
+    // ---- actions impossibles, renvoient une exception ----
+
+    // r.tourner("S");
+    // r.avancer(3,8);
+
+    cout << endl << " // RETOUR A L'ETAT INITIAL \\\\" << endl;
+
+    //On change d'état avec cette action
+    r.repartir();
+
+    cout << "**** EtatEnCharge ****" << endl;
+
+    r.rencontrerPlot(plot);
+
+    cout << "**** EtatEnChargeFacePlot ****" << endl;
+
+    r.poser();
+
+    cout << "**** EtatAVide ****" << endl;
+
+    r.tourner("N");
+
+    cout << "**** EtatAVide ****" << endl << endl << " ----- FIN -----" << endl;
 
 
 	return 0;

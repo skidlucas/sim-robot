@@ -10,17 +10,17 @@ private:
 
 public:
 
-class Bad_State{};
+	class Bad_State{};
 
-virtual EtatRobot *avancer();
-virtual EtatRobot *tourner();
-virtual EtatRobot *saisir();
-virtual EtatRobot *poser();
-virtual void peser();
-virtual EtatRobot *rencontrerPlot();
-virtual void evaluerPlot();
-virtual EtatRobot *figer();
-virtual EtatRobot *repartir();
+	virtual EtatRobot *avancer();
+	virtual EtatRobot *tourner();
+	virtual EtatRobot *saisir();
+	virtual EtatRobot *poser();
+	virtual void peser();
+	virtual EtatRobot *rencontrerPlot();
+	virtual void evaluerPlot();
+	virtual EtatRobot *figer();
+	virtual EtatRobot *repartir();
 
 };
 
