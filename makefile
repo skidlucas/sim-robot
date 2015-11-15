@@ -1,8 +1,7 @@
 
-# targets
 
 all : 
-	g++ -std=c++11 *.cpp
+	g++ -std=c++11 *.cpp -o robot
 
 test : main.o Robot.o
 	g++ -g -Wall -std=c++11 -o test main.o Robot.o

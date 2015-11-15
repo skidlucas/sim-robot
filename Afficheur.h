@@ -13,7 +13,7 @@ class Afficheur {
 private:
 
 public:
-	virtual void afficher(string message);
+	void afficher(string message);
 
 
 };

@@ -1,5 +1,4 @@
 #include "Robot.h"
-#include "AfficheurRobotConsole.h"
 
 
 #include <stdio.h>
@@ -10,7 +9,7 @@
 int main(int argc, char const *argv[])
 {
 	Robot r;
-	AfficheurRobotConsole aff;
+	Afficheur aff;
 	r.attacherAfficheur(aff);
 	r.avancer(1,1);
 	Plot plot(5);
@@ -18,15 +17,19 @@ int main(int argc, char const *argv[])
 	Objet obj;
 	r.saisir(obj);
 	r.peser();
+
 	r.poser();
-	//r.peser(); Bad_State
+	//r.peser(); //Bad_State
+
 	r.figer();
+	//r.avancer(3,3); //Bad_State
+
 	r.repartir();
 
-	//r.avancer(1,1); Bad_State
+	//r.avancer(3,3); //Bad_State
 
-	//r.tourner("N"); meme direction donc mouvement null
-	//r.avancer(1,1); Bad_State
+	//r.tourner("N"); // meme direction donc mouvement null
+	//r.avancer(3,3); // Bad_State
 
 	r.tourner("S");
 	r.avancer(2,2);
