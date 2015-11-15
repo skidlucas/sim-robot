@@ -39,7 +39,6 @@ int main(int argc, char const *argv[])
     // r.peser();
     // r.poser();
     // r.repartir();
-    // r.tourner("O");
     // r.rencontrerPlot(plot);
 
     //On change d'état avec cette action
