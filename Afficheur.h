@@ -5,16 +5,19 @@
 #include <string>
 #include <iostream>
 
+#include "Robot.h"
+
 
 using namespace std;
 
+class Robot;
 class Afficheur {
 
 private:
 
 public:
 	void afficher(string message);
-
+	
 
 };
 

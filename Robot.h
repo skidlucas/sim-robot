@@ -21,6 +21,7 @@
 
 using namespace std;
 
+class Afficheur;
 class Robot{
 
 private:
