@@ -6,6 +6,8 @@
 #include <typeinfo>
 
 
+#include "Commande.h"
+
 int main(int argc, char const *argv[])
 {
 	Robot r;
@@ -101,6 +103,8 @@ int main(int argc, char const *argv[])
 
     cout << "**** EtatAVide ****" << endl << endl << " ----- FIN -----" << endl;
 
+    Commande* com = Commande::nouvelleCommande("FIGER");
 
+    cout << typeid(*com).name() << endl;
 	return 0;
 }

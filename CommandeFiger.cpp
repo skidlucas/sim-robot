@@ -11,6 +11,6 @@ void CommandeFiger::desexecuter(){
 
 }
 
-// Commande * constructeurVirtuel(){
-// 	return new CommandeFiger();
-// }
+Commande * CommandeFiger::constructeurVirtuel(){
+	return new CommandeFiger();
+}

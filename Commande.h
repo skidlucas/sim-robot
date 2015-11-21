@@ -14,20 +14,23 @@ private:
 
 public:
 
+	class ErreurCommandeException{};
+
 	Commande(string c){
 		mapCommandes()[c] = this;
 	}
 
-	class Exception{};
-
-	static map<string, Commande *> mapCommandes();
+	static map<string, Commande *>& mapCommandes();
 
 	virtual void executer();
 	virtual void desexecuter();
 
-	Commande * nouvelleCommande(string c);
+	static Commande * nouvelleCommande(string c);
 	virtual Commande * constructeurVirtuel();
+
+
 
 };
 
 #endif
+

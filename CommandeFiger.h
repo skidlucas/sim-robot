@@ -9,24 +9,20 @@
 
 using namespace std;
 
-//class CommandeFiger : public Commande {
-class CommandeFiger {
+class CommandeFiger : public Commande {
 
 private:
 	static CommandeFiger *instance;
 
 public:
 
-	CommandeFiger(string c = "FIGER"){}
-
-	// CommandeFiger():Commande("FIGER") {
-	// }
+    CommandeFiger():Commande("FIGER"){}
 
 
 	void executer();
 	void desexecuter();
 
-	// Commande * constructeurVirtuel();
+	Commande * constructeurVirtuel();
 	
 };
 
