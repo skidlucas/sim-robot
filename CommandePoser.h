@@ -5,13 +5,25 @@
 #include <string>
 #include <iostream>
 
+#include "Commande.h"
+
 using namespace std;
 
-class CommandePoser {
+class CommandePoser : public Commande {
 
 private:
-
+	static CommandePoser *instance;
 public:
+
+    CommandePoser(Robot* r = nullptr):Commande("POSER"){
+    	robot = r;
+    }
+
+
+	void executer();
+	void desexecuter();
+
+	Commande * constructeurVirtuel(Robot* r);
 	
 };
 

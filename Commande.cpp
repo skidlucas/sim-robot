@@ -16,10 +16,10 @@ void Commande::desexecuter(){
 }
 
 
-Commande * Commande::nouvelleCommande(string c){
-	return mapCommandes()[c]->constructeurVirtuel();
+Commande * Commande::nouvelleCommande(string c, Robot* r){
+	return mapCommandes()[c]->constructeurVirtuel(r);
 }
 
-Commande * Commande::constructeurVirtuel(){
+Commande * Commande::constructeurVirtuel(Robot* r){
 	throw ErreurCommandeException();
 }

@@ -1,5 +1,5 @@
-#ifndef _COMMANDE_FIGE_
-#define _COMMANDE_FIGE_
+#ifndef _COMMANDE_POSER_
+#define _COMMANDE_POSER_
 
 
 #include <string>
@@ -9,13 +9,13 @@
 
 using namespace std;
 
-class CommandeFiger : public Commande {
+class CommandePeser : public Commande {
 
 private:
-	static CommandeFiger *instance;
+	static CommandePeser *instance;
 public:
 
-    CommandeFiger(Robot* r = nullptr):Commande("FIGER"){
+    CommandePeser(Robot* r = nullptr):Commande("PESER"){
     	robot = r;
     }
 

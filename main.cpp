@@ -6,7 +6,7 @@
 #include <typeinfo>
 
 
-#include "Commande.h"
+#include "Invocateur.h"
 
 int main(int argc, char const *argv[])
 {
@@ -16,95 +16,96 @@ int main(int argc, char const *argv[])
 	Plot plot(5);
 	Objet obj(10);
 
-
-    cout << endl << " ----- TEST ROBOT -----" << endl << endl << "**** EtatAVide ****" << endl;
-    r.avancer(5,2);
-    r.tourner("S");
-    
-    // ---- actions impossibles, renvoient une exception ----
-
-    // r.evaluerPlot();
-    // r.saisir(obj);
-    // r.poser();
-    // r.peser();
-    // r.repartir();
-
-    //On change d'état avec cette action
-    r.rencontrerPlot(plot);
-
-    cout << "**** EtatAVideFacePlot ****" << endl;
-    r.evaluerPlot();
-
-    // ---- actions impossibles, renvoient une exception ----
-
-    // r.avancer(0,9);
-    // r.peser();
-    // r.poser();
-    // r.repartir();
-    // r.rencontrerPlot(plot);
-
-    //On change d'état avec cette action
-    r.saisir(obj);
+    Invocateur invo;
+    invo.lire(&r);
 
 
-    cout << "**** EtatEnChargeFacePlot ****" << endl;
-    r.peser();
-
-    // ---- actions impossibles, renvoient une exception ----
-
-    // r.repartir();
-    // r.avancer(1,2);
-    // r.evaluerPlot();
-    // r.saisir(obj);
-    // r.rencontrerPlot(plot);
-
-    //On change d'état avec cette action
-    r.tourner("E");
-
-    cout << "**** EtatEnCharge ****" << endl;
-
-    r.peser();
-    r.avancer(7,9);
-    r.tourner("O");
-
-    // ---- actions impossibles, renvoient une exception ----
-
-    // r.repartir();
-    // r.evaluerPlot();
-    // r.saisir(obj);
-    // r.rencontrerPlot(plot);
-
-    //On change d'état avec cette action
-    r.figer();
-
-    cout << "**** EtatFigé ****" << endl;
-
-    // ---- actions impossibles, renvoient une exception ----
-
+    // cout << endl << " ----- TEST ROBOT -----" << endl << endl << "**** EtatAVide ****" << endl;
+    // r.avancer(5,2);
     // r.tourner("S");
-    // r.avancer(3,8);
+    
+    // // ---- actions impossibles, renvoient une exception ----
 
-    cout << endl << " // RETOUR A L'ETAT INITIAL \\\\" << endl;
+    // // r.evaluerPlot();
+    // // r.saisir(obj);
+    // // r.poser();
+    // // r.peser();
+    // // r.repartir();
 
-    //On change d'état avec cette action
-    r.repartir();
+    // //On change d'état avec cette action
+    // r.rencontrerPlot(plot);
 
-    cout << "**** EtatEnCharge ****" << endl;
+    // cout << "**** EtatAVideFacePlot ****" << endl;
+    // r.evaluerPlot();
 
-    r.rencontrerPlot(plot);
+    // // ---- actions impossibles, renvoient une exception ----
 
-    cout << "**** EtatEnChargeFacePlot ****" << endl;
+    // // r.avancer(0,9);
+    // // r.peser();
+    // // r.poser();
+    // // r.repartir();
+    // // r.rencontrerPlot(plot);
 
-    r.poser();
+    // //On change d'état avec cette action
+    // r.saisir(obj);
 
-    cout << "**** EtatAVide ****" << endl;
 
-    r.tourner("N");
+    // cout << "**** EtatEnChargeFacePlot ****" << endl;
+    // r.peser();
 
-    cout << "**** EtatAVide ****" << endl << endl << " ----- FIN -----" << endl;
+    // // ---- actions impossibles, renvoient une exception ----
 
-    Commande* com = Commande::nouvelleCommande("FIGER");
+    // // r.repartir();
+    // // r.avancer(1,2);
+    // // r.evaluerPlot();
+    // // r.saisir(obj);
+    // // r.rencontrerPlot(plot);
 
-    cout << typeid(*com).name() << endl;
+    // //On change d'état avec cette action
+    // r.tourner("E");
+
+    // cout << "**** EtatEnCharge ****" << endl;
+
+    // r.peser();
+    // r.avancer(7,9);
+    // r.tourner("O");
+
+    // // ---- actions impossibles, renvoient une exception ----
+
+    // // r.repartir();
+    // // r.evaluerPlot();
+    // // r.saisir(obj);
+    // // r.rencontrerPlot(plot);
+
+    // //On change d'état avec cette action
+    // r.figer();
+
+    // cout << "**** EtatFigé ****" << endl;
+
+    // // ---- actions impossibles, renvoient une exception ----
+
+    // // r.tourner("S");
+    // // r.avancer(3,8);
+
+    // cout << endl << " // RETOUR A L'ETAT INITIAL \\\\" << endl;
+
+    // //On change d'état avec cette action
+    // r.repartir();
+
+    // cout << "**** EtatEnCharge ****" << endl;
+
+    // r.rencontrerPlot(plot);
+
+    // cout << "**** EtatEnChargeFacePlot ****" << endl;
+
+    // r.poser();
+
+    // cout << "**** EtatAVide ****" << endl;
+
+    // r.tourner("N");
+
+    // cout << "**** EtatAVide ****" << endl << endl << " ----- FIN -----" << endl;
+
+
 	return 0;
 }

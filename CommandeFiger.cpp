@@ -4,13 +4,13 @@ CommandeFiger* CommandeFiger::instance = new CommandeFiger;
 
 
 void CommandeFiger::executer(){
-
+    robot->figer();
 }
 
 void CommandeFiger::desexecuter(){
-
+	
 }
 
-Commande * CommandeFiger::constructeurVirtuel(){
-	return new CommandeFiger();
+Commande * CommandeFiger::constructeurVirtuel(Robot* r){
+	return new CommandeFiger(r);
 }

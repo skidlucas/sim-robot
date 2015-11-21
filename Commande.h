@@ -1,6 +1,7 @@
 #ifndef _COMMANDE_
 #define _COMMANDE_
 
+#include "Robot.h"
 
 #include <string>
 #include <map>
@@ -11,8 +12,10 @@ using namespace std;
 class Commande {
 
 private:
-
+	
 public:
+
+	Robot* robot;
 
 	class ErreurCommandeException{};
 
@@ -25,8 +28,8 @@ public:
 	virtual void executer();
 	virtual void desexecuter();
 
-	static Commande * nouvelleCommande(string c);
-	virtual Commande * constructeurVirtuel();
+	static Commande * nouvelleCommande(string c, Robot* r);
+	virtual Commande * constructeurVirtuel(Robot* r);
 
 
 

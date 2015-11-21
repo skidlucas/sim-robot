@@ -5,13 +5,26 @@
 #include <string>
 #include <iostream>
 
+#include "Commande.h"
+
 using namespace std;
 
-class CommandeTourner {
+class CommandeTourner : public Commande {
 
 private:
-
+	static CommandeTourner *instance;
+	string direction;
 public:
+
+    CommandeTourner(Robot* r = nullptr):Commande("TOURNER"){
+    	robot = r;
+    }
+
+
+	void executer();
+	void desexecuter();
+	
+	Commande * constructeurVirtuel(Robot* r);
 	
 };
 
