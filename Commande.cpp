@@ -23,3 +23,8 @@ Commande * Commande::nouvelleCommande(string c, Robot* r){
 Commande * Commande::constructeurVirtuel(Robot* r){
 	throw ErreurCommandeException();
 }
+
+
+void Commande::setPara(vector<string> listePrara){
+	throw ErreurCommandeException();
+}

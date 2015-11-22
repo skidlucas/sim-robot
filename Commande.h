@@ -4,6 +4,7 @@
 #include "Robot.h"
 
 #include <string>
+#include <vector>
 #include <map>
 #include <iostream>
 
@@ -30,6 +31,8 @@ public:
 
 	static Commande * nouvelleCommande(string c, Robot* r);
 	virtual Commande * constructeurVirtuel(Robot* r);
+
+	virtual void setPara(vector<string> listePrara);
 
 
 
