@@ -15,3 +15,5 @@ void CommandePoser::desexecuter(){
 Commande * CommandePoser::constructeurVirtuel(Robot* r){
 	return new CommandePoser(r);
 }
+
+void CommandePoser::setPara(vector<string> listePrara){}

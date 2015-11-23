@@ -16,3 +16,5 @@ void CommandeSaisir::desexecuter(){
 Commande * CommandeSaisir::constructeurVirtuel(Robot* r){
 	return new CommandeSaisir(r);
 }
+
+void CommandeSaisir::setPara(vector<string> listePrara){}

@@ -15,3 +15,5 @@ void CommandeRencontrerPlot::desexecuter(){
 Commande * CommandeRencontrerPlot::constructeurVirtuel(Robot* r){
 	return new CommandeRencontrerPlot(r);
 }
+
+void CommandeRencontrerPlot::setPara(vector<string> listePrara){}

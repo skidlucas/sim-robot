@@ -24,7 +24,9 @@ public:
 	void desexecuter();
 
 	Commande * constructeurVirtuel(Robot* r);
-	
+
+	void setPara(vector<string> listePrara);
+
 	
 };
 

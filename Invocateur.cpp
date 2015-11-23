@@ -1,50 +1,58 @@
 #include "Invocateur.h"
 #include "Robot.h"
 
+#include <sstream>
+#include <string>
 #include <typeinfo>
 #include <vector>
 
 
+void help(){
+    cout << "FIGER,REPARTIR,AVANCER,TOURNER,RENCONTRERPLOT,EVALUERPLOT,SAISIR,PESER,POSER" << endl;
+}
 
+// vector<string> decouper(string s){
+//     istream mot = (istream) s;
+//     vector<string> v;
 
+//     while( std::getline(s,mot,',') ){
+//         v.push_back(mot);
+//     }
+
+// }
 
 void Invocateur::lire(Robot* r){
 
+
     // while(true){
-
     //     string rep;
-    //     cout << "Entrer une commande (FIGER,REPARTIR,AVANCER,TOURNER,RENCONTRERPLOT,EVALUERPLOT,SAISIR,PESER,POSER) :" << endl;
-    //     cin >> rep;
+    //     string para1 = "";
+    //     string para2 = ""; 
 
-    //     Commande* com = Commande::nouvelleCommande(rep,r);
+    //     cout << "Entrer une commande avec le bon nombre de paramètre (FIGER,AVANCER 2 2, ...) :" << endl;
+    //     cin >> rep >> endl;
 
-    //     switch(rep){
-    //         case "AVANCER":
-    //             int x = 0;
-    //             int y = 0;
-    //             cout << "x ?" << endl;
-    //             cin >> x;
-    //             cout << "y ?" << endl;
-    //             cin >> y;
-    //             vector<int> v;
-    //             v.push_back(x);
-    //             v.push_back(y);
-    //             com->setPara(v);
-    //         break;
-    //         case "TOURNER":
-    //         break;
-    //         case "RENCONTRERPLOT":
-    //         break;       
-    //         case "SAISIR":
-    //         break;
-    //         default:
-    //         break;
-    //     }
+    //     vector<string> v = decouper(rep);
 
-    //     cout << typeid(*com).name() << endl;
-    //     com->executer();
+    //     cout << v[0] << endl;
 
-    // }
+
+
+        // Commande* com = Commande::nouvelleCommande(rep,r);
+
+        // vector<int> v;
+        // v.push_back(x);
+        // v.push_back(y);
+        // com->setPara(v);
+
+
+        // cout << typeid(*com).name() << endl;
+        // com->executer();
+
+
+    //}
+
+
 
     vector<string> v;
 

@@ -14,3 +14,5 @@ void CommandeRepartir::desexecuter(){
 Commande * CommandeRepartir::constructeurVirtuel(Robot* r){
 	return new CommandeRepartir(r);
 }
+
+void CommandeRepartir::setPara(vector<string> listePrara){}
