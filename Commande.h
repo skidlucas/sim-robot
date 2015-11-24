@@ -36,9 +36,6 @@ public:
 	static Commande * nouvelleCommande(string c, Robot* r, Invocateur * inv);
 	virtual Commande * constructeurVirtuel(Robot* r, Invocateur * inv);
 
-	virtual void setPara(vector<string> listePrara);
-
-
 
 };
 

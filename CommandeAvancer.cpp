@@ -4,6 +4,8 @@ CommandeAvancer* CommandeAvancer::instance = new CommandeAvancer;
 
 
 void CommandeAvancer::executer(){
+	X = invocateur->getInt("Donner l'abscisse X : ");
+	Y = invocateur->getInt("Donner l'abscisse Y : ");
 	robot->avancer(X,Y);
 }
 
@@ -15,13 +17,3 @@ Commande * CommandeAvancer::constructeurVirtuel(Robot* r, Invocateur * inv){
 	return new CommandeAvancer(r,inv);
 }
 
-
-void CommandeAvancer::setPara(vector<string> listePrara){
-	if(listePrara.size() < 2){
-		cout << "nb para !!!!" << endl;
-		exit(1);
-	}
-
-	X = stoi(listePrara[0]);
-	Y = stoi(listePrara[1]);
-}

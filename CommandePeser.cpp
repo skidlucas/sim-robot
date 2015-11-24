@@ -16,4 +16,3 @@ Commande * CommandePeser::constructeurVirtuel(Robot* r, Invocateur * inv){
 	return new CommandePeser(r,inv);
 }
 
-void CommandePeser::setPara(vector<string> listePrara){}

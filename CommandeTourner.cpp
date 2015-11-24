@@ -4,6 +4,7 @@ CommandeTourner* CommandeTourner::instance = new CommandeTourner;
 
 
 void CommandeTourner::executer(){
+	direction = invocateur->getString("Donner la direction (S,N,E,O) : ");
     robot->tourner(direction);
 }
 
@@ -15,6 +16,3 @@ Commande * CommandeTourner::constructeurVirtuel(Robot* r, Invocateur * inv){
 	return new CommandeTourner(r,inv);
 }
 
-void CommandeTourner::setPara(vector<string> listePrara){
-	direction = listePrara[0];
-}

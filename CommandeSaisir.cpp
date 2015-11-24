@@ -18,4 +18,3 @@ Commande * CommandeSaisir::constructeurVirtuel(Robot* r, Invocateur * inv){
 	return new CommandeSaisir(r,inv);
 }
 
-void CommandeSaisir::setPara(vector<string> listePrara){}

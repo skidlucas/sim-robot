@@ -27,8 +27,6 @@ public:
 
 	Commande * constructeurVirtuel(Robot* r, Invocateur * inv);
 
-	void setPara(vector<string> listePrara);
-
 	
 };
 

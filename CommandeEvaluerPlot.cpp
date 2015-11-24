@@ -14,6 +14,3 @@ void CommandeEvaluerPlot::desexecuter(){
 Commande * CommandeEvaluerPlot::constructeurVirtuel(Robot* r, Invocateur * inv){
 	return new CommandeEvaluerPlot(r,inv);
 }
-
-
-void CommandeEvaluerPlot::setPara(vector<string> listePrara){}

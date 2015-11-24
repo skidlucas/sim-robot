@@ -19,6 +19,8 @@ public:
 
 	int getInt(string message);
 
+	string getString(string message);
+
 };
 
 #endif

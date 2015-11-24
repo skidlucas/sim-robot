@@ -4,7 +4,8 @@ CommandeRencontrerPlot* CommandeRencontrerPlot::instance = new CommandeRencontre
 
 
 void CommandeRencontrerPlot::executer(){
-	Plot plot;
+	int h = invocateur->getInt("Donner la hauteur du plot: ");
+	Plot plot(h);
     robot->rencontrerPlot(plot);
 }
 
@@ -15,5 +16,3 @@ void CommandeRencontrerPlot::desexecuter(){
 Commande * CommandeRencontrerPlot::constructeurVirtuel(Robot* r, Invocateur * inv){
 	return new CommandeRencontrerPlot(r,inv);
 }
-
-void CommandeRencontrerPlot::setPara(vector<string> listePrara){}

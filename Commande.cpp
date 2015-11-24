@@ -24,7 +24,3 @@ Commande * Commande::constructeurVirtuel(Robot* r, Invocateur * inv){
 	throw ErreurCommandeException();
 }
 
-
-void Commande::setPara(vector<string> listePrara){
-	throw ErreurCommandeException();
-}
