@@ -11,8 +11,8 @@ void CommandeAvancer::desexecuter(){
 	
 }
 
-Commande * CommandeAvancer::constructeurVirtuel(Robot* r){
-	return new CommandeAvancer(r);
+Commande * CommandeAvancer::constructeurVirtuel(Robot* r, Invocateur * inv){
+	return new CommandeAvancer(r,inv);
 }
 
 

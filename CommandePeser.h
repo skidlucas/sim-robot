@@ -15,15 +15,16 @@ private:
 	static CommandePeser *instance;
 public:
 
-    CommandePeser(Robot* r = nullptr):Commande("PESER"){
+    CommandePeser(Robot* r = nullptr, Invocateur * inv = nullptr):Commande("PESER"){
     	robot = r;
+    	invocateur = inv;
     }
 
 
 	void executer();
 	void desexecuter();
 
-	Commande * constructeurVirtuel(Robot* r);
+	Commande * constructeurVirtuel(Robot* r, Invocateur * inv);
 
 	void setPara(vector<string> listePrara);
 	

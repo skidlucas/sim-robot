@@ -15,15 +15,16 @@ private:
 	static CommandeRencontrerPlot *instance;
 public:
 
-    CommandeRencontrerPlot(Robot* r = nullptr):Commande("RENCONTRERPLOT"){
+    CommandeRencontrerPlot(Robot* r = nullptr, Invocateur * inv = nullptr):Commande("RENCONTRERPLOT"){
     	robot = r;
+    	invocateur = inv;
     }
 
 
 	void executer();
 	void desexecuter();
 
-	Commande * constructeurVirtuel(Robot* r);
+	Commande * constructeurVirtuel(Robot* r, Invocateur * inv);
 	
 	void setPara(vector<string> listePrara);
 

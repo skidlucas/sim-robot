@@ -12,8 +12,8 @@ void CommandePeser::desexecuter(){
 	
 }
 
-Commande * CommandePeser::constructeurVirtuel(Robot* r){
-	return new CommandePeser(r);
+Commande * CommandePeser::constructeurVirtuel(Robot* r, Invocateur * inv){
+	return new CommandePeser(r,inv);
 }
 
 void CommandePeser::setPara(vector<string> listePrara){}

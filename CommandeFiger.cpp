@@ -11,8 +11,8 @@ void CommandeFiger::desexecuter(){
 	
 }
 
-Commande * CommandeFiger::constructeurVirtuel(Robot* r){
-	return new CommandeFiger(r);
+Commande * CommandeFiger::constructeurVirtuel(Robot* r, Invocateur * inv){
+	return new CommandeFiger(r,inv);
 }
 
 void CommandeFiger::setPara(vector<string> listePrara){}

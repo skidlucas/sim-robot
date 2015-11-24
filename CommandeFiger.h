@@ -15,15 +15,16 @@ private:
 	static CommandeFiger *instance;
 public:
 
-    CommandeFiger(Robot* r = nullptr):Commande("FIGER"){
+    CommandeFiger(Robot* r = nullptr, Invocateur * inv = nullptr):Commande("FIGER"){
     	robot = r;
+    	invocateur = inv;
     }
 
 
 	void executer();
 	void desexecuter();
 
-	Commande * constructeurVirtuel(Robot* r);
+	Commande * constructeurVirtuel(Robot* r, Invocateur * inv);
 
 	void setPara(vector<string> listePrara);
 	

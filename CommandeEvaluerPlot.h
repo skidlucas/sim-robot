@@ -15,15 +15,16 @@ private:
 	static CommandeEvaluerPlot *instance;
 public:
 
-    CommandeEvaluerPlot(Robot* r = nullptr):Commande("EVALUERPLOT"){
+    CommandeEvaluerPlot(Robot* r = nullptr, Invocateur * inv = nullptr):Commande("EVALUERPLOT"){
     	robot = r;
+    	invocateur = inv;
     }
 
 
 	void executer();
 	void desexecuter();
 
-	Commande * constructeurVirtuel(Robot* r);
+	Commande * constructeurVirtuel(Robot* r, Invocateur * inv);
 
 	void setPara(vector<string> listePrara);
 

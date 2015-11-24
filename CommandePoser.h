@@ -15,15 +15,16 @@ private:
 	static CommandePoser *instance;
 public:
 
-    CommandePoser(Robot* r = nullptr):Commande("POSER"){
+    CommandePoser(Robot* r = nullptr, Invocateur * inv = nullptr):Commande("POSER"){
     	robot = r;
+    	invocateur = inv;
     }
 
 
 	void executer();
 	void desexecuter();
 
-	Commande * constructeurVirtuel(Robot* r);
+	Commande * constructeurVirtuel(Robot* r, Invocateur * inv);
 
 	void setPara(vector<string> listePrara);
 	

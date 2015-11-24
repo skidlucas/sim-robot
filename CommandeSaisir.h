@@ -15,15 +15,16 @@ private:
 	static CommandeSaisir *instance;
 public:
 
-    CommandeSaisir(Robot* r = nullptr):Commande("SAISIR"){
+    CommandeSaisir(Robot* r = nullptr, Invocateur * inv = nullptr):Commande("SAISIR"){
     	robot = r;
+    	invocateur = inv;
     }
 
 
 	void executer();
 	void desexecuter();
 
-	Commande * constructeurVirtuel(Robot* r);
+	Commande * constructeurVirtuel(Robot* r, Invocateur * inv);
 
 	void setPara(vector<string> listePrara);
 };

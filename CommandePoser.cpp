@@ -12,8 +12,8 @@ void CommandePoser::desexecuter(){
 	
 }
 
-Commande * CommandePoser::constructeurVirtuel(Robot* r){
-	return new CommandePoser(r);
+Commande * CommandePoser::constructeurVirtuel(Robot* r, Invocateur * inv){
+	return new CommandePoser(r,inv);
 }
 
 void CommandePoser::setPara(vector<string> listePrara){}

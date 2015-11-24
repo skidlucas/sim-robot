@@ -11,8 +11,8 @@ void CommandeTourner::desexecuter(){
 	
 }
 
-Commande * CommandeTourner::constructeurVirtuel(Robot* r){
-	return new CommandeTourner(r);
+Commande * CommandeTourner::constructeurVirtuel(Robot* r, Invocateur * inv){
+	return new CommandeTourner(r,inv);
 }
 
 void CommandeTourner::setPara(vector<string> listePrara){

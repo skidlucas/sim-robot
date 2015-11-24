@@ -16,15 +16,16 @@ private:
 	string direction;
 public:
 
-    CommandeTourner(Robot* r = nullptr):Commande("TOURNER"){
+    CommandeTourner(Robot* r = nullptr, Invocateur * inv = nullptr):Commande("TOURNER"){
     	robot = r;
+    	invocateur = inv;
     }
 
 
 	void executer();
 	void desexecuter();
 	
-	Commande * constructeurVirtuel(Robot* r);
+	Commande * constructeurVirtuel(Robot* r, Invocateur * inv);
 	
 	void setPara(vector<string> listePrara);
 

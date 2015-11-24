@@ -12,8 +12,8 @@ void CommandeRencontrerPlot::desexecuter(){
 	
 }
 
-Commande * CommandeRencontrerPlot::constructeurVirtuel(Robot* r){
-	return new CommandeRencontrerPlot(r);
+Commande * CommandeRencontrerPlot::constructeurVirtuel(Robot* r, Invocateur * inv){
+	return new CommandeRencontrerPlot(r,inv);
 }
 
 void CommandeRencontrerPlot::setPara(vector<string> listePrara){}

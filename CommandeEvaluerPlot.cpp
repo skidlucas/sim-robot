@@ -11,8 +11,8 @@ void CommandeEvaluerPlot::desexecuter(){
 	
 }
 
-Commande * CommandeEvaluerPlot::constructeurVirtuel(Robot* r){
-	return new CommandeEvaluerPlot(r);
+Commande * CommandeEvaluerPlot::constructeurVirtuel(Robot* r, Invocateur * inv){
+	return new CommandeEvaluerPlot(r,inv);
 }
 
 

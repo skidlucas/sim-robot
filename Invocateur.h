@@ -16,6 +16,9 @@ private:
 public:
 
 	void lire(Robot* r);
+
+	int getInt(string message);
+
 };
 
 #endif

@@ -15,15 +15,16 @@ private:
 	static CommandeRepartir *instance;
 public:
 
-    CommandeRepartir(Robot* r = nullptr):Commande("REPARTIR"){
+    CommandeRepartir(Robot* r = nullptr, Invocateur * inv = nullptr):Commande("REPARTIR"){
     	robot = r;
+    	invocateur = inv;
     }
 
 
 	void executer();
 	void desexecuter();
 
-	Commande * constructeurVirtuel(Robot* r);
+	Commande * constructeurVirtuel(Robot* r, Invocateur * inv);
 	
 	void setPara(vector<string> listePrara);
 
