@@ -80,7 +80,6 @@ void Invocateur::lire(Robot* r){
         } else {
             try {
                 Commande* com = Commande::nouvelleCommande(rep,r,this);
-                cout << typeid(*com).name() << endl;
                 com->executer();
             } catch(EtatRobot::Bad_State){
                 cout << "Erreur: action impossible dans cet état !" << endl;
