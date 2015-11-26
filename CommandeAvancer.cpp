@@ -4,8 +4,8 @@ CommandeAvancer* CommandeAvancer::instance = new CommandeAvancer;
 
 
 void CommandeAvancer::executer(){
-	X = invocateur->getInt("Donner l'abscisse X : ");
-	Y = invocateur->getInt("Donner l'abscisse Y : ");
+	X = invocateur->getInt("X : ");
+	Y = invocateur->getInt("Y : ");
 	robot->avancer(X,Y);
 }
 

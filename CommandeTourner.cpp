@@ -4,7 +4,7 @@ CommandeTourner* CommandeTourner::instance = new CommandeTourner;
 
 
 void CommandeTourner::executer(){
-	direction = invocateur->getString("Donner la direction (S,N,E,O) : ");
+	direction = invocateur->getDirection("Donner la direction (N, E, S, O) : ");
     robot->tourner(direction);
 }
 

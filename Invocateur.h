@@ -19,7 +19,7 @@ public:
 
 	int getInt(string message);
 
-	string getString(string message);
+	string getDirection(string message);
 
 };
 
