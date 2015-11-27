@@ -9,10 +9,13 @@ void CommandeTourner::executer(){
 }
 
 void CommandeTourner::desexecuter(){
-	
+
+
 }
 
 Commande * CommandeTourner::constructeurVirtuel(Robot* r, Invocateur * inv){
-	return new CommandeTourner(r,inv);
+	Commande* commande = new CommandeTourner(r,inv);
+    pileCommandes().push(commande);
+	return commande;
 }
 

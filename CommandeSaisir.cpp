@@ -11,10 +11,14 @@ void CommandeSaisir::executer(){
 }
 
 void CommandeSaisir::desexecuter(){
-	
+	robot->poser();
+	pileCommandes().pop();
+
 }
 
 Commande * CommandeSaisir::constructeurVirtuel(Robot* r, Invocateur * inv){
-	return new CommandeSaisir(r,inv);
+	Commande* commande = new CommandeSaisir(r,inv);
+    pileCommandes().push(commande);
+	return commande;
 }
 

@@ -6,6 +6,7 @@
 
 #include <string>
 #include <vector>
+#include <stack>
 #include <map>
 #include <iostream>
 
@@ -19,8 +20,10 @@ private:
 public:
 
 	Robot* robot;
-
 	Invocateur * invocateur;
+
+	static map<string, Commande *>& mapCommandes();
+    static stack<Commande*>& pileCommandes();
 
 	class ErreurCommandeException{};
 
@@ -28,7 +31,7 @@ public:
 		mapCommandes()[c] = this;
 	}
 
-	static map<string, Commande *>& mapCommandes();
+
 
 	virtual void executer();
 	virtual void desexecuter();

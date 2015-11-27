@@ -9,10 +9,12 @@ void CommandePeser::executer(){
 }
 
 void CommandePeser::desexecuter(){
-	
+	pileCommandes().pop();
 }
 
 Commande * CommandePeser::constructeurVirtuel(Robot* r, Invocateur * inv){
-	return new CommandePeser(r,inv);
+	Commande* commande = new CommandePeser(r,inv);
+    pileCommandes().push(commande);
+	return commande;
 }
 

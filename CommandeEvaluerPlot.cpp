@@ -8,9 +8,12 @@ void CommandeEvaluerPlot::executer(){
 }
 
 void CommandeEvaluerPlot::desexecuter(){
-	
+	pileCommandes().pop();
+
 }
 
 Commande * CommandeEvaluerPlot::constructeurVirtuel(Robot* r, Invocateur * inv){
-	return new CommandeEvaluerPlot(r,inv);
+	Commande* commande = new CommandeEvaluerPlot(r,inv);
+    pileCommandes().push(commande);
+	return commande;
 }

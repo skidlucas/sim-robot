@@ -10,9 +10,12 @@ void CommandeRencontrerPlot::executer(){
 }
 
 void CommandeRencontrerPlot::desexecuter(){
-	
+
+
 }
 
 Commande * CommandeRencontrerPlot::constructeurVirtuel(Robot* r, Invocateur * inv){
-	return new CommandeRencontrerPlot(r,inv);
+	Commande* commande = new CommandeRencontrerPlot(r,inv);
+    pileCommandes().push(commande);
+	return commande;
 }

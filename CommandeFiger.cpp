@@ -8,9 +8,11 @@ void CommandeFiger::executer(){
 }
 
 void CommandeFiger::desexecuter(){
-	
+	robot->repartir();
+	pileCommandes().pop();
 }
 
 Commande * CommandeFiger::constructeurVirtuel(Robot* r, Invocateur * inv){
-	return new CommandeFiger(r,inv);
-}
+	Commande* commande = new CommandeFiger(r,inv);
+    pileCommandes().push(commande);
+	return commande;}

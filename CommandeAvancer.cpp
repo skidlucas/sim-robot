@@ -10,10 +10,12 @@ void CommandeAvancer::executer(){
 }
 
 void CommandeAvancer::desexecuter(){
-	
+
 }
 
 Commande * CommandeAvancer::constructeurVirtuel(Robot* r, Invocateur * inv){
-	return new CommandeAvancer(r,inv);
+	Commande* commande = new CommandeAvancer(r,inv);
+    pileCommandes().push(commande);
+	return commande;
 }
 

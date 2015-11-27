@@ -8,9 +8,13 @@ void CommandeRepartir::executer(){
 }
 
 void CommandeRepartir::desexecuter(){
-	
+	robot->figer();
+	pileCommandes().pop();
+
 }
 
 Commande * CommandeRepartir::constructeurVirtuel(Robot* r, Invocateur * inv){
-	return new CommandeRepartir(r,inv);
+	Commande* commande = new CommandeRepartir(r,inv);
+    pileCommandes().push(commande);
+	return commande;
 }

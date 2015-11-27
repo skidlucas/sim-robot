@@ -6,6 +6,11 @@ map<string, Commande *>& Commande::mapCommandes(){
   	return *commandes;
 }
 
+stack<Commande*>& Commande::pileCommandes(){
+	static stack<Commande*>* pile = new stack<Commande*>;
+  	return *pile;
+}
+
 void Commande::executer(){
 	throw ErreurCommandeException();
 
