@@ -15,6 +15,8 @@ private:
 	static CommandeAvancer *instance;
 	int X = 0;
 	int Y = 0;
+	int prevX = 0;
+	int prevY = 0;
 public:
 
     CommandeAvancer(Robot* r = nullptr, Invocateur * inv = nullptr):Commande("AVANCER"){

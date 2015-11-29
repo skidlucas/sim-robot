@@ -7,11 +7,12 @@
 #include <vector>
 #include <cctype>
 #include <algorithm>
+#include <stdlib.h>
 
 static vector<string> listeCommande {"FIGER","REPARTIR","AVANCER","TOURNER","RENCONTRERPLOT","EVALUERPLOT","SAISIR","PESER","POSER"};
 
 void help(){
-    cout << "FIGER, REPARTIR, AVANCER, TOURNER, RENCONTRERPLOT, EVALUERPLOT, SAISIR, PESER, POSER" << endl;
+    cout << "FIGER, REPARTIR, AVANCER, TOURNER, RENCONTRERPLOT, EVALUERPLOT, SAISIR, PESER, POSER, ANNULER, QUITTER" << endl;
 }
 
 bool isNum(string s){
@@ -75,6 +76,14 @@ void Invocateur::lire(Robot* r){
         
         if(rep == "HELP"){
             help();
+        } else if (rep == "ANNULER") {
+            if (Commande::pileCommandes().size() == 0){
+                cout << "Aucune action à annuler." << endl;
+            } else if (Commande::pileCommandes().size() > 0){
+                Commande::pileCommandes().top()->desexecuter();
+            }  
+        } else if (rep == "QUITTER"){
+            exit(0);
         } else if (!isCommande(rep)) {
             cout << "Commande inconnue. Veuillez réessayer." << endl;
         } else {

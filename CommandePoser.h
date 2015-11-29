@@ -13,6 +13,7 @@ class CommandePoser : public Commande {
 
 private:
 	static CommandePoser *instance;
+	Objet objet;
 public:
 
     CommandePoser(Robot* r = nullptr, Invocateur * inv = nullptr):Commande("POSER"){

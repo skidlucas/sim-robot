@@ -13,7 +13,8 @@ class CommandeTourner : public Commande {
 
 private:
 	static CommandeTourner *instance;
-	string direction;
+	string direction = "";
+	string directionPrev;
 public:
 
     CommandeTourner(Robot* r = nullptr, Invocateur * inv = nullptr):Commande("TOURNER"){
