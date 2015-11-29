@@ -92,6 +92,7 @@ void Invocateur::lire(Robot* r){
                 com->executer();
             } catch(EtatRobot::Bad_State){
                 cout << "Erreur: action impossible dans cet état !" << endl;
+                Commande::pileCommandes().pop(); // pour enlever la mauvaise action de la pile
             }
         }
 
