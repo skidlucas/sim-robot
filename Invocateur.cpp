@@ -7,9 +7,8 @@
 #include <vector>
 #include <cctype>
 #include <algorithm>
-#include <stdlib.h>
 
-static vector<string> listeCommande {"FIGER","REPARTIR","AVANCER","TOURNER","RENCONTRERPLOT","EVALUERPLOT","SAISIR","PESER","POSER", "AIDE", "ANNULER"};
+static vector<string> listeCommande;
 
 
 bool isNum(string s){
@@ -64,6 +63,10 @@ bool isCommande(string rep){
 }
 
 void Invocateur::lire(Robot* r){
+    for(auto it = Commande::mapCommandes().cbegin(); it != Commande::mapCommandes().cend(); ++it){
+        listeCommande.push_back(it->first);
+    }
+
     cout << "--- SIMULATEUR DE ROBOT ---" << endl << "Commande AIDE pour avoir la liste des commandes. Elles ne sont pas sensibles à la casse." << endl;
 
     while(true){
@@ -72,9 +75,7 @@ void Invocateur::lire(Robot* r){
         cin >> rep;
         transform(rep.begin(), rep.end(),rep.begin(), ::toupper);
         
-        if (rep == "QUITTER"){
-            exit(0);
-        } else if (!isCommande(rep)) {
+        if (!isCommande(rep)) {
             cout << "Commande inconnue. Veuillez réessayer." << endl;
         } else {
             try {
