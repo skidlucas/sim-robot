@@ -67,12 +67,13 @@ bool isCommande(string rep){
 }
 
 void Invocateur::lire(Robot* r){
-    cout << "--- SIMULATEUR DE ROBOT ---" << endl << "Commande HELP pour avoir la liste des commandes." << endl;
+    cout << "--- SIMULATEUR DE ROBOT ---" << endl << "Commande HELP pour avoir la liste des commandes. Elles ne sont pas sensibles à la casse." << endl;
 
     while(true){
         string rep;
         cout << "Entrer une commande :" << endl;
         cin >> rep;
+        transform(rep.begin(), rep.end(),rep.begin(), ::toupper);
         
         if(rep == "HELP"){
             help();
