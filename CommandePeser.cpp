@@ -13,6 +13,6 @@ void CommandePeser::desexecuter(){
 }
 
 Commande * CommandePeser::constructeurVirtuel(Robot* r, Invocateur * inv){    
-	return new CommandePeser(r, inv);;
+	return new CommandePeser(r, inv);
 }
 

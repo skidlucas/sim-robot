@@ -9,11 +9,8 @@
 #include <algorithm>
 #include <stdlib.h>
 
-static vector<string> listeCommande {"FIGER","REPARTIR","AVANCER","TOURNER","RENCONTRERPLOT","EVALUERPLOT","SAISIR","PESER","POSER"};
+static vector<string> listeCommande {"FIGER","REPARTIR","AVANCER","TOURNER","RENCONTRERPLOT","EVALUERPLOT","SAISIR","PESER","POSER", "AIDE", "ANNULER"};
 
-void help(){
-    cout << "FIGER, REPARTIR, AVANCER, TOURNER, RENCONTRERPLOT, EVALUERPLOT, SAISIR, PESER, POSER, ANNULER, QUITTER" << endl;
-}
 
 bool isNum(string s){
     for (int i = 0; i < s.size(); i++)
@@ -67,7 +64,7 @@ bool isCommande(string rep){
 }
 
 void Invocateur::lire(Robot* r){
-    cout << "--- SIMULATEUR DE ROBOT ---" << endl << "Commande HELP pour avoir la liste des commandes. Elles ne sont pas sensibles à la casse." << endl;
+    cout << "--- SIMULATEUR DE ROBOT ---" << endl << "Commande AIDE pour avoir la liste des commandes. Elles ne sont pas sensibles à la casse." << endl;
 
     while(true){
         string rep;
@@ -75,17 +72,7 @@ void Invocateur::lire(Robot* r){
         cin >> rep;
         transform(rep.begin(), rep.end(),rep.begin(), ::toupper);
         
-        if(rep == "HELP"){
-            help();
-        } else if (rep == "ANNULER") {
-            if (Commande::pileCommandes().size() == 0){
-                cout << "Aucune action à annuler." << endl;
-            } else if (Commande::pileCommandes().size() > 0){
-                if (Commande::pileCommandes().top()->reversible()){
-                    Commande::pileCommandes().top()->desexecuter();
-                }
-            }  
-        } else if (rep == "QUITTER"){
+        if (rep == "QUITTER"){
             exit(0);
         } else if (!isCommande(rep)) {
             cout << "Commande inconnue. Veuillez réessayer." << endl;
