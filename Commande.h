@@ -32,7 +32,7 @@ public:
 	}
 
 
-
+	virtual bool reversible();
 	virtual void executer();
 	virtual void desexecuter();
 

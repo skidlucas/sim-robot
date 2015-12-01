@@ -20,7 +20,9 @@ public:
     	invocateur = inv;
     }
 
-
+    bool reversible(){
+    	return false;
+    }
 	void executer();
 	void desexecuter();
 

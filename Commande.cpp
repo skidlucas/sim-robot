@@ -11,6 +11,10 @@ stack<Commande*>& Commande::pileCommandes(){
   	return *pile;
 }
 
+bool Commande::reversible(){
+	return true;
+}
+
 void Commande::executer(){
 	throw ErreurCommandeException();
 

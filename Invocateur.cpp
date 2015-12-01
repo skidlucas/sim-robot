@@ -81,7 +81,9 @@ void Invocateur::lire(Robot* r){
             if (Commande::pileCommandes().size() == 0){
                 cout << "Aucune action à annuler." << endl;
             } else if (Commande::pileCommandes().size() > 0){
-                Commande::pileCommandes().top()->desexecuter();
+                if (Commande::pileCommandes().top()->reversible()){
+                    Commande::pileCommandes().top()->desexecuter();
+                }
             }  
         } else if (rep == "QUITTER"){
             exit(0);
