@@ -78,12 +78,15 @@ void Invocateur::lire(Robot* r){
         if (!isCommande(rep)) {
             cout << "Commande inconnue. Veuillez réessayer." << endl;
         } else {
+            Commande* com = Commande::nouvelleCommande(rep,r,this);
             try {
-                Commande* com = Commande::nouvelleCommande(rep,r,this);
                 com->executer();
             } catch(EtatRobot::Bad_State){
                 cout << "Erreur: action impossible dans cet état !" << endl;
-                Commande::pileCommandes().pop(); // pour enlever la mauvaise action de la pile
+                if (com->reversible()){
+                    Commande::pileCommandes().pop(); // pour enlever la mauvaise action de la pile
+                }
+                
             }
         }
 

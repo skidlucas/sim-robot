@@ -8,9 +8,7 @@ void CommandeAnnuler::executer(){
 	if (pileCommandes().size() == 0){
         cout << "Aucune action à annuler." << endl;
     } else if (pileCommandes().size() > 0){
-        if (pileCommandes().top()->reversible()){
             pileCommandes().top()->desexecuter();
-        }
     } 
 }
 
