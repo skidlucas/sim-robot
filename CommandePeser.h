@@ -1,5 +1,5 @@
-#ifndef _COMMANDE_POSER_
-#define _COMMANDE_POSER_
+#ifndef _COMMANDE_PESER_
+#define _COMMANDE_PESER_
 
 
 #include <string>

@@ -27,15 +27,15 @@ int main(int argc, char const *argv[])
 
     Invocateur invo;
 
-    CommandeAvancer avancer(& r);
-    CommandeSaisir saisir(& r);
-    CommandeTourner tourner(& r);
-    CommandeRencontrerPlot rencontrer(& r);
-    //CommandePeser peser(& r);                 si on commente ça marche (pas tout testé), sinon erreur de compil...
-    CommandePoser poser(& r);
-    CommandeEvaluerPlot evaluer(& r);
-    CommandeFiger figer(& r);
-    CommandeRepartir repartir(& r);
+    CommandeAvancer avancer(&r);
+    CommandeSaisir saisir(&r);
+    CommandeTourner tourner(&r);
+    CommandeRencontrerPlot rencontrer(&r);
+    CommandePeser peser(&r);                 
+    CommandePoser poser(&r);
+    CommandeEvaluerPlot evaluer(&r);
+    CommandeFiger figer(&r);
+    CommandeRepartir repartir(&r);
 
     invo.lire();
 
