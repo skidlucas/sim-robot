@@ -10,9 +10,9 @@
 #include "CommandeAvancer.h"
 #include "CommandeSaisir.h"
 #include "CommandeTourner.h"
+#include "CommandePoser.h"
 #include "CommandeRencontrerPlot.h"
 #include "CommandePeser.h"
-#include "CommandePoser.h"
 #include "CommandeEvaluerPlot.h"
 #include "CommandeFiger.h"
 #include "CommandeRepartir.h"
@@ -31,7 +31,7 @@ int main(int argc, char const *argv[])
     CommandeSaisir saisir(& r);
     CommandeTourner tourner(& r);
     CommandeRencontrerPlot rencontrer(& r);
-    CommandePeser peser(& r);
+    //CommandePeser peser(& r);                 si on commente ça marche (pas tout testé), sinon erreur de compil...
     CommandePoser poser(& r);
     CommandeEvaluerPlot evaluer(& r);
     CommandeFiger figer(& r);

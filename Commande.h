@@ -2,7 +2,6 @@
 #define _COMMANDE_
 
 #include "Invocateur.h"
-#include "Robot.h"
 
 #include <string>
 #include <vector>
