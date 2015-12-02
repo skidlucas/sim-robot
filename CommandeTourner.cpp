@@ -17,8 +17,8 @@ void CommandeTourner::desexecuter(){
     pileCommandes().pop();
 }
 
-Commande * CommandeTourner::constructeurVirtuel(Robot* r, Invocateur * inv){
-	CommandeTourner* commande = new CommandeTourner(r,inv);
+Commande * CommandeTourner::constructeurVirtuel(Invocateur * inv){
+	CommandeTourner* commande = new CommandeTourner(robot,inv);
 	commande->directionPrev = direction;
     commande->direction = direction;
     pileCommandes().push(commande);

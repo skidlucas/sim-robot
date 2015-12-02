@@ -15,8 +15,7 @@ private:
 	static CommandeAnnuler *instance;
 public:
 
-    CommandeAnnuler(Robot* r = nullptr, Invocateur * inv = nullptr):Commande("ANNULER"){
-    	robot = r;
+    CommandeAnnuler(Invocateur * inv = nullptr):Commande("ANNULER"){
     	invocateur = inv;
     }
 
@@ -26,7 +25,7 @@ public:
 	void executer();
 	void desexecuter();
 
-	Commande * constructeurVirtuel(Robot* r, Invocateur * inv);
+	Commande * constructeurVirtuel(Invocateur * inv);
 
 	
 };

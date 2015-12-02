@@ -12,7 +12,7 @@ void CommandeQuitter::desexecuter(){
 	
 }
 
-Commande * CommandeQuitter::constructeurVirtuel(Robot* r, Invocateur * inv){
-	return new CommandeQuitter(r, inv);
+Commande * CommandeQuitter::constructeurVirtuel(Invocateur * inv){
+	return new CommandeQuitter(inv);
 }
 

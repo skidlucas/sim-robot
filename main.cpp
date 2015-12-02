@@ -1,12 +1,21 @@
 #include "Robot.h"
 
-
 #include <stdio.h>
 #include <iostream>
 #include <typeinfo>
 
 
 #include "Invocateur.h"
+#include "Commande.h"
+#include "CommandeAvancer.h"
+#include "CommandeSaisir.h"
+#include "CommandeTourner.h"
+#include "CommandeRencontrerPlot.h"
+#include "CommandePeser.h"
+#include "CommandePoser.h"
+#include "CommandeEvaluerPlot.h"
+#include "CommandeFiger.h"
+#include "CommandeRepartir.h"
 
 int main(int argc, char const *argv[])
 {
@@ -17,7 +26,18 @@ int main(int argc, char const *argv[])
 	Objet obj(10);
 
     Invocateur invo;
-    invo.lire(&r);
+
+    CommandeAvancer avancer(& r);
+    CommandeSaisir saisir(& r);
+    CommandeTourner tourner(& r);
+    CommandeRencontrerPlot rencontrer(& r);
+    CommandePeser peser(& r);
+    CommandePoser poser(& r);
+    CommandeEvaluerPlot evaluer(& r);
+    CommandeFiger figer(& r);
+    CommandeRepartir repartir(& r);
+
+    invo.lire();
 
 
     // cout << endl << " ----- TEST ROBOT -----" << endl << endl << "**** EtatAVide ****" << endl;

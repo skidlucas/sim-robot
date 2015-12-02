@@ -1,5 +1,4 @@
 #include "Invocateur.h"
-#include "Robot.h"
 
 #include <sstream>
 #include <string>
@@ -62,7 +61,7 @@ bool isCommande(string rep){
     return false;
 }
 
-void Invocateur::lire(Robot* r){
+void Invocateur::lire(){
     for(auto it = Commande::mapCommandes().cbegin(); it != Commande::mapCommandes().cend(); ++it){
         listeCommande.push_back(it->first);
     }
@@ -78,7 +77,7 @@ void Invocateur::lire(Robot* r){
         if (!isCommande(rep)) {
             cout << "Commande inconnue. Veuillez réessayer." << endl;
         } else {
-            Commande* com = Commande::nouvelleCommande(rep,r,this);
+            Commande* com = Commande::nouvelleCommande(rep, this);
             try {
                 com->executer();
             } catch(EtatRobot::Bad_State){

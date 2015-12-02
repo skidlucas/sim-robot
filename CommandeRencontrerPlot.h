@@ -5,17 +5,17 @@
 #include <string>
 #include <iostream>
 
-#include "Commande.h"
+#include "CommandeRobot.h"
 
 using namespace std;
 
-class CommandeRencontrerPlot : public Commande {
+class CommandeRencontrerPlot : public CommandeRobot {
 
 private:
 	static CommandeRencontrerPlot *instance;
 public:
 
-    CommandeRencontrerPlot(Robot* r = nullptr, Invocateur * inv = nullptr):Commande("RENCONTRERPLOT"){
+    CommandeRencontrerPlot(Robot* r = nullptr, Invocateur * inv = nullptr):CommandeRobot("RENCONTRERPLOT"){
     	robot = r;
     	invocateur = inv;
     }
@@ -26,7 +26,7 @@ public:
 	void executer();
 	void desexecuter();
 
-	Commande * constructeurVirtuel(Robot* r, Invocateur * inv);
+	Commande * constructeurVirtuel(Invocateur * inv);
 	
 	
 };

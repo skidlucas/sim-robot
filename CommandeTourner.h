@@ -5,11 +5,11 @@
 #include <string>
 #include <iostream>
 
-#include "Commande.h"
+#include "CommandeRobot.h"
 
 using namespace std;
 
-class CommandeTourner : public Commande {
+class CommandeTourner : public CommandeRobot {
 
 private:
 	static CommandeTourner *instance;
@@ -17,7 +17,7 @@ private:
 	string directionPrev;
 public:
 
-    CommandeTourner(Robot* r = nullptr, Invocateur * inv = nullptr):Commande("TOURNER"){
+    CommandeTourner(Robot* r = nullptr, Invocateur * inv = nullptr):CommandeRobot("TOURNER"){
     	robot = r;
     	invocateur = inv;
     }
@@ -26,7 +26,7 @@ public:
 	void executer();
 	void desexecuter();
 	
-	Commande * constructeurVirtuel(Robot* r, Invocateur * inv);
+	Commande * constructeurVirtuel(Invocateur * inv);
 	
 };
 

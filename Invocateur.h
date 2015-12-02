@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "Commande.h"
+#include "Robot.h"
 
 using namespace std;
 
@@ -15,7 +16,7 @@ private:
 
 public:
 
-	void lire(Robot* r);
+	void lire();
 
 	int getInt(string message);
 

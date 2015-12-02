@@ -15,8 +15,7 @@ private:
 	static CommandeAide *instance;
 public:
 
-    CommandeAide(Robot* r = nullptr, Invocateur * inv = nullptr):Commande("AIDE"){
-    	robot = r;
+    CommandeAide(Invocateur * inv = nullptr):Commande("AIDE"){
     	invocateur = inv;
     }
 
@@ -26,7 +25,7 @@ public:
 	void executer();
 	void desexecuter();
 
-	Commande * constructeurVirtuel(Robot* r, Invocateur * inv);
+	Commande * constructeurVirtuel(Invocateur * inv);
 
 	
 };

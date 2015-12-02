@@ -12,7 +12,7 @@ void CommandeFiger::desexecuter(){
 	pileCommandes().pop();
 }
 
-Commande * CommandeFiger::constructeurVirtuel(Robot* r, Invocateur * inv){
-	Commande* commande = new CommandeFiger(r,inv);
+Commande * CommandeFiger::constructeurVirtuel(Invocateur * inv){
+	Commande* commande = new CommandeFiger(robot, inv);
     pileCommandes().push(commande);
 	return commande;}

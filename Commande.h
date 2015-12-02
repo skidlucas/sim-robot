@@ -1,8 +1,8 @@
 #ifndef _COMMANDE_
 #define _COMMANDE_
 
-#include "Robot.h"
 #include "Invocateur.h"
+#include "Robot.h"
 
 #include <string>
 #include <vector>
@@ -19,7 +19,6 @@ private:
 	
 public:
 
-	Robot* robot;
 	Invocateur * invocateur;
 
 	static map<string, Commande *>& mapCommandes();
@@ -36,8 +35,8 @@ public:
 	virtual void executer();
 	virtual void desexecuter();
 
-	static Commande * nouvelleCommande(string c, Robot* r, Invocateur * inv);
-	virtual Commande * constructeurVirtuel(Robot* r, Invocateur * inv);
+	static Commande * nouvelleCommande(string c, Invocateur * inv);
+	virtual Commande * constructeurVirtuel(Invocateur * inv);
 
 
 };

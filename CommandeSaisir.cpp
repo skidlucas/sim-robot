@@ -16,8 +16,8 @@ void CommandeSaisir::desexecuter(){
 
 }
 
-Commande * CommandeSaisir::constructeurVirtuel(Robot* r, Invocateur * inv){
-	Commande* commande = new CommandeSaisir(r,inv);
+Commande * CommandeSaisir::constructeurVirtuel(Invocateur * inv){
+	Commande* commande = new CommandeSaisir(robot,inv);
     pileCommandes().push(commande);
 	return commande;
 }

@@ -15,7 +15,7 @@ void CommandeAide::desexecuter(){
 	
 }
 
-Commande * CommandeAide::constructeurVirtuel(Robot* r, Invocateur * inv){
-	return new CommandeAide(r, inv);
+Commande * CommandeAide::constructeurVirtuel(Invocateur * inv){
+	return new CommandeAide(inv);
 }
 

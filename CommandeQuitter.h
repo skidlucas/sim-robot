@@ -16,8 +16,7 @@ private:
 	static CommandeQuitter *instance;
 public:
 
-    CommandeQuitter(Robot* r = nullptr, Invocateur * inv = nullptr):Commande("QUITTER"){
-    	robot = r;
+    CommandeQuitter(Invocateur * inv = nullptr):Commande("QUITTER"){
     	invocateur = inv;
     }
 
@@ -27,7 +26,7 @@ public:
 	void executer();
 	void desexecuter();
 
-	Commande * constructeurVirtuel(Robot* r, Invocateur * inv);
+	Commande * constructeurVirtuel(Invocateur * inv);
 
 	
 };

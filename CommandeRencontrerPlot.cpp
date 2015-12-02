@@ -13,6 +13,6 @@ void CommandeRencontrerPlot::desexecuter(){
 	
 }
 
-Commande * CommandeRencontrerPlot::constructeurVirtuel(Robot* r, Invocateur * inv){
-	return new CommandeRencontrerPlot(r, inv);
+Commande * CommandeRencontrerPlot::constructeurVirtuel(Invocateur * inv){
+	return new CommandeRencontrerPlot(robot, inv);
 }

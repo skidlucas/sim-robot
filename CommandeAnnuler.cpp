@@ -16,7 +16,7 @@ void CommandeAnnuler::desexecuter(){
 	
 }
 
-Commande * CommandeAnnuler::constructeurVirtuel(Robot* r, Invocateur * inv){
-	return new CommandeAnnuler(r, inv);
+Commande * CommandeAnnuler::constructeurVirtuel(Invocateur * inv){
+	return new CommandeAnnuler(inv);
 }
 

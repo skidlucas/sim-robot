@@ -13,8 +13,8 @@ void CommandeRepartir::desexecuter(){
 
 }
 
-Commande * CommandeRepartir::constructeurVirtuel(Robot* r, Invocateur * inv){
-	Commande* commande = new CommandeRepartir(r,inv);
+Commande * CommandeRepartir::constructeurVirtuel(Invocateur * inv){
+	Commande* commande = new CommandeRepartir(robot,inv);
     pileCommandes().push(commande);
 	return commande;
 }

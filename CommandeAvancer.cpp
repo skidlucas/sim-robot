@@ -16,8 +16,8 @@ void CommandeAvancer::desexecuter(){
     pileCommandes().pop();
 }
 
-Commande * CommandeAvancer::constructeurVirtuel(Robot* r, Invocateur * inv){
-	CommandeAvancer* commande = new CommandeAvancer(r,inv);
+Commande * CommandeAvancer::constructeurVirtuel(Invocateur * inv){
+	CommandeAvancer* commande = new CommandeAvancer(robot, inv);
 	commande->X = X;
     commande->Y = Y;
     pileCommandes().push(commande);

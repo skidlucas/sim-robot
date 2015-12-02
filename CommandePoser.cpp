@@ -14,8 +14,8 @@ void CommandePoser::desexecuter(){
 	pileCommandes().pop();
 }
 
-Commande * CommandePoser::constructeurVirtuel(Robot* r, Invocateur * inv){
-	Commande* commande = new CommandePoser(r,inv);
+Commande * CommandePoser::constructeurVirtuel(Invocateur * inv){
+	Commande* commande = new CommandePoser(robot,inv);
     pileCommandes().push(commande);
 	return commande;
 }
