@@ -6,8 +6,10 @@ void CommandeTourner::executer(){
 		directionPrev = direction;
 	}
 	
-	direction = invocateur->getDirection("Donner la direction (N, E, S, O) : ");
-    robot->tourner(direction);
+	string tmpDirection = invocateur->getDirection("Donner la direction (N, E, S, O) : ");
+    robot->tourner(tmpDirection);
+
+    direction = tmpDirection;
 }
 
 void CommandeTourner::desexecuter(){

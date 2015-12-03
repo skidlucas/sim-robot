@@ -19,6 +19,7 @@ public:
     CommandeTourner(Robot* r = nullptr, Invocateur * inv = nullptr):CommandeRobot("TOURNER"){
     	robot = r;
     	invocateur = inv;
+    	direction = r->getDirection();
     }
 
     

@@ -4,10 +4,16 @@
 
 void CommandeAvancer::executer(){
 	prevX = X;
-	prevY = Y;
-	X = invocateur->getInt("X : ");
-	Y = invocateur->getInt("Y : ");
-	robot->avancer(X,Y);
+	prevX = Y;
+
+	//On utilise des varaibles temporaires a cause des Bad_state qui peuvent remonter
+	int tmpX = invocateur->getInt("X : ");
+	int tmpY = invocateur->getInt("Y : ");
+	robot->avancer(tmpX,tmpY);
+
+	//On remplace les X et Y aprés avancer pour les cas où on a une exception
+	X = tmpX;
+	Y = tmpY;
 }
 
 void CommandeAvancer::desexecuter(){

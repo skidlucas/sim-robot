@@ -12,8 +12,8 @@ using namespace std;
 class CommandeAvancer : public CommandeRobot {
 
 private:
-	int X = 0;
-	int Y = 0;
+	int X;
+	int Y;
 	int prevX = 0;
 	int prevY = 0;
 public:
@@ -21,6 +21,8 @@ public:
     CommandeAvancer(Robot* r = nullptr, Invocateur * inv = nullptr):CommandeRobot("AVANCER"){
     	robot = r;
     	invocateur = inv;
+    	X = r->getPosition().getx();
+		Y = r->getPosition().gety();
     }
 
     
