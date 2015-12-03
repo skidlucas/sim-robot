@@ -1,7 +1,5 @@
 #include "CommandeEvaluerPlot.h"
 
-CommandeEvaluerPlot* CommandeEvaluerPlot::instance = new CommandeEvaluerPlot;
-
 
 void CommandeEvaluerPlot::executer(){
     robot->evaluerPlot();

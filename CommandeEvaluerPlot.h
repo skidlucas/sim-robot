@@ -12,7 +12,6 @@ using namespace std;
 class CommandeEvaluerPlot : public CommandeRobot {
 
 private:
-	static CommandeEvaluerPlot *instance;
 public:
 
     CommandeEvaluerPlot(Robot* r = nullptr, Invocateur * inv = nullptr):CommandeRobot("EVALUERPLOT"){

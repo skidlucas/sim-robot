@@ -12,7 +12,6 @@ using namespace std;
 class CommandePoser : public CommandeRobot {
 
 private:
-	static CommandePoser *instance;
 	Objet objet;
 public:
 

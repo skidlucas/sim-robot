@@ -12,7 +12,6 @@ using namespace std;
 class CommandeTourner : public CommandeRobot {
 
 private:
-	static CommandeTourner *instance;
 	string direction = "";
 	string directionPrev;
 public:

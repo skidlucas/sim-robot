@@ -12,7 +12,6 @@ using namespace std;
 class CommandeAvancer : public CommandeRobot {
 
 private:
-	static CommandeAvancer *instance;
 	int X = 0;
 	int Y = 0;
 	int prevX = 0;

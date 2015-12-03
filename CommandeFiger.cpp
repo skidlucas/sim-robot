@@ -1,7 +1,5 @@
 #include "CommandeFiger.h"
 
-CommandeFiger* CommandeFiger::instance = new CommandeFiger;
-
 
 void CommandeFiger::executer(){
     robot->figer();

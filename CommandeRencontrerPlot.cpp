@@ -1,7 +1,5 @@
 #include "CommandeRencontrerPlot.h"
 
-CommandeRencontrerPlot* CommandeRencontrerPlot::instance = new CommandeRencontrerPlot;
-
 
 void CommandeRencontrerPlot::executer(){
 	int h = invocateur->getInt("Donner la hauteur du plot: ");

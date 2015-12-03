@@ -1,7 +1,5 @@
 #include "CommandeTourner.h"
 
-CommandeTourner* CommandeTourner::instance = new CommandeTourner;
-
 
 void CommandeTourner::executer(){
 	if (direction != ""){

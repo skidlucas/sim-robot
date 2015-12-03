@@ -1,6 +1,5 @@
 #include "CommandeAvancer.h"
 
-CommandeAvancer* CommandeAvancer::instance = new CommandeAvancer;
 
 
 void CommandeAvancer::executer(){

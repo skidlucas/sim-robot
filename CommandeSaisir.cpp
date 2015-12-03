@@ -1,7 +1,5 @@
 #include "CommandeSaisir.h"
 
-CommandeSaisir* CommandeSaisir::instance = new CommandeSaisir;
-
 
 void CommandeSaisir::executer(){
 	int p = invocateur->getInt("Donner le poids de l'objet à saisir : ");

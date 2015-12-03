@@ -1,7 +1,5 @@
 #include "CommandePoser.h"
 
-CommandePoser* CommandePoser::instance = new CommandePoser;
-
 
 void CommandePoser::executer(){
 	this->objet = this->robot->getObjet();

@@ -12,7 +12,6 @@ using namespace std;
 class CommandeFiger : public CommandeRobot {
 
 private:
-	static CommandeFiger *instance;
 public:
 
     CommandeFiger(Robot* r = nullptr, Invocateur * inv = nullptr):CommandeRobot("FIGER"){
